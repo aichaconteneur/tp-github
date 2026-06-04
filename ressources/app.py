@@ -2,7 +2,7 @@
 app.py — API NexaCloud
 Mini API Flask utilisée comme cible du pipeline CI/CD dans le TP GitHub Actions.
 """
-
+coucou ma belle fffffffffffffffffffffffffffffffffff
 from flask import Flask, jsonify
 
 app = Flask(__name__)
