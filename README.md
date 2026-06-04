@@ -117,7 +117,8 @@ git add notes.md
 git commit -m "feat: premier commit — activation de la CI"
 
 # Pusher vers votre fork
-git push origin main
+
+
 ```
 
 **Vérification :** allez dans l'onglet **Actions** de votre fork GitHub. Vous devriez voir votre premier workflow en cours d'exécution (cercle orange → coche verte si tout va bien).
