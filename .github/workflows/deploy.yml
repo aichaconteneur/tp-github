@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-staging:
+    runs-on: ubuntu-latest
+    environment: staging
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Déployer en staging
+        run: |
+          echo "✅ Déploiement en staging réussi"
+          echo "URL : https://staging.nexacloud.example.com"
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    environment: production
+    needs: deploy-staging         # attend que staging soit terminé ET approuvé
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Déployer en production
+        run: |
+          echo "🚀 Déploiement en production réussi"
+          echo "URL : https://nexacloud.example.com"
