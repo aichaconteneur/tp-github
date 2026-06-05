@@ -1,0 +1,26 @@
+# .github/dependabot.yml — configuration complète commentée
+version: 2
+
+updates:
+  # GitHub Actions : surveille les "uses: action/nom@version" dans les workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"      # "daily" ou "monthly" aussi possible
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "ci"            # les commits Dependabot auront le préfixe "ci:"
+
+  # pip : surveille requirements.txt dans /ressources
+  - package-ecosystem: "pip"
+    directory: "/ressources"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "python"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore"         # les commits auront le préfixe "chore:"
