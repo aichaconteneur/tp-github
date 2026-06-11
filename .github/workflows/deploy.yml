@@ -15,7 +15,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment }}   # bloqué si production nécessite une approbation
+    environment: ${{ inputs.environment }}
 
     steps:
       - name: Checkout
@@ -28,5 +28,5 @@ jobs:
             echo "URL : https://nexacloud.example.com"
           else
             echo "✅ Déploiement en STAGING"
-            echo "URL : http://nexacloud-api-aicha.azurewebsites.net"
+            echo "URL : https://appservice-aissatou.azurewebsites.net"
           fi
