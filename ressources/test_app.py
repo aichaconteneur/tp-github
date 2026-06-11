@@ -57,3 +57,13 @@ def test_logs_critical_alerte(client):
     assert "critical_count" in data
     assert "alerte" in data
     assert data["alerte"] is True
+
+
+def test_logs_stats(client):
+    """La route /logs/stats retourne le total et le détail."""
+    response = client.get("/logs/stats")
+    assert response.status_code == 200
+    data = response.get_json()
+    assert "total" in data
+    assert "breakdown" in data
+    assert data["total"] == 185
