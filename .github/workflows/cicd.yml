@@ -45,7 +45,7 @@ jobs:
       - name: Déployer sur Azure App Service (staging)
         uses: azure/webapps-deploy@v3
         with:
-          app-name: "nexacloud-api-aicha"
+          app-name: "appservice-aissatou"
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_STAGING }}
           package: ressources/
 
@@ -68,6 +68,6 @@ jobs:
       - name: Déployer sur Azure App Service (production)
         uses: azure/webapps-deploy@v3
         with:
-          app-name: "nexacloud-api-aicha"
+          app-name: "appservice-aissatou"
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           package: ressources/
