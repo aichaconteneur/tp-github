@@ -28,5 +28,5 @@ jobs:
             echo "URL : https://nexacloud.example.com"
           else
             echo "✅ Déploiement en STAGING"
-            echo "URL : https://staging.nexacloud.example.com"
+            echo "URL : http://nexacloud-api-aicha.azurewebsites.net"
           fi
